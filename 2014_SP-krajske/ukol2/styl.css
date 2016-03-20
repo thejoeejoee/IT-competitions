@@ -1,0 +1,65 @@
+body {
+	font-family: "Times New Roman", serif;
+}
+h1, h2, h3, h4 {
+	font-family: "Arial", sans-serif;
+	color: green;
+	font-weight: bold;
+}
+p {
+	text-indent: 2rem;
+	margin-bottom: 20px;
+}
+p#paticka {
+	border-top: 1px solid gray;
+	font-size: 0.8rem;
+}
+table {
+	background-color: lightGray;
+	border-collapse: collapse;
+}
+td {
+	border: 0.5px solid black;
+}
+td:last-of-type{ /* žlutá na koci */
+	background-color: rgba(255,255,0,0.5)
+}
+th, td:first-of-type { /* záhlaví + první bunky ve sloupci */
+	border: 0.5px solid gray;
+	color: white;
+	background-color: black;
+}
+a {
+	text-decoration: none;
+	color: orange;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:visited{
+	color: #ffee00;
+}
+
+q:before { /* citace */
+	content: "„";
+}
+
+q:after {
+	content: "“ ";
+}
+
+span[data-vysvetlivka] { /* podtrhnutí vysvětlivek */
+	border-bottom: 2px dotted orange;
+}
+
+span:hover:after { /* CSS3 a pseudoselektory jsou super */
+    content: attr(data-vysvetlivka);
+    font-size: 0.9rem;
+    width: 300px;
+    position: absolute;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: justify;
+}

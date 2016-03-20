@@ -1,0 +1,17 @@
+@import "reset.scss";
+
+#sipka {
+	position: relative;
+	line-height: 600px;
+	vertical-align: middle;
+	font-size: 400%;
+	display: inline;
+	z-index: 99;
+}
+
+#c {
+	position: relative;
+	display: inline;
+	z-index: 120;
+	border: 1px solid black;
+}

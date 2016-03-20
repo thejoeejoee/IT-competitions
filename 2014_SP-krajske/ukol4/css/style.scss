@@ -1,0 +1,38 @@
+@import "reset.scss";
+
+$push: 40px;
+
+ul.kolecko {
+	margin-left: $push;
+	& > li {
+		list-style-type: disc;
+	}
+}
+
+ol.cislo {
+	margin-left: $push;
+	& > li {
+		list-style-type: decimal;
+	}
+}
+
+ul.ctverec {
+	margin-left: $push;
+	& > li {
+		list-style-type: square;
+	}
+}
+
+ol.pismena {
+	margin-left: $push;
+	& > li {
+		list-style-type: upper-alpha;
+	}
+}
+
+ul.odrazka {
+	margin-left: $push;
+	& > li:before { /* CSS3 */
+		content: " - ";
+	}
+}
