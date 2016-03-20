@@ -1,0 +1,68 @@
+html {
+  color: rgb(25, 25, 240);
+  font-family: "Ubuntu", sans-serif; // bo je Cambria Microsoft Windows font
+  font-size: 12pt;
+  background-color: rgba(black, 0.07);
+}
+
+body {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin: auto;
+  td, th {
+    padding: 1em 3em;
+    border: 1px solid black;
+  }
+  tr td:not(:first-child) {
+    text-align: right;
+  }
+  tr td:first-child {
+    text-align: left;
+  }
+  thead td {
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+img {
+  margin: 2em auto;
+  display: inline-block;
+  max-width: 70%;
+  text-align: center;
+  border-radius: 2em;
+}
+
+.input {
+  margin: .8em 0;
+  select {
+    width: 15em;
+  }
+}
+
+.trip-form {
+  margin: 2em;
+  .input label {
+    text-align: left;
+    width: 10em;
+    display: inline-block;
+  }
+  .computed-duration.input {
+    margin-bottom: 1em;
+  }
+}
+
+h3 {
+  margin-bottom: 0;
+}

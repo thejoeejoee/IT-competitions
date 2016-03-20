@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jízdní řád Lodička s.r.o.</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body data-ng-app="app">
+<div class="page">
+    <h1>Jízdní řád - Lodička s.r.o.</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Přístaviště</th>
+            <th>po proudu</th>
+            <th>proti proudu</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Litovel</td>
+            <td>0 min</td>
+            <td>71 min</td>
+        </tr>
+        <tr>
+            <td>Střeň</td>
+            <td>17 min</td>
+            <td>51 min</td>
+        </tr>
+        <tr>
+            <td>Hynkov</td>
+            <td>32 min</td>
+            <td>33 min</td>
+        </tr>
+        <tr>
+            <td>Chomoutov</td>
+            <td>47 min</td>
+            <td>15 min</td>
+        </tr>
+        <tr>
+            <td>Olomouc</td>
+            <td>60 min</td>
+            <td>0 min</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div data-ng-controller="TripController">
+        <form name="tripForm" class="trip-form">
+            <div class="input">
+                <label for="startTime">čas odjezdu</label>
+                <input type="time" name="startTime" id="startTime" data-ng-model="startTime" title="HH:mm">
+                <div class="error" data-ng-show="tripForm.startTime.$error.time">
+                    Toto není validní čas!
+                </div>
+            </div>
+            <div class="input">
+                <label for="startStation">nástupní stanice</label>
+                <select data-ng-model="startStation" id="startStation" data-ng-change="computeDuration()">
+                    <option data-ng-repeat="station in stations">{{station}}</option>
+                </select>
+            </div>
+            <div class="input">
+                <label for="endStation">konečná stanice</label>
+                <select data-ng-model="endStation" id="endStation" data-ng-change="computeDuration()">
+                    <option data-ng-repeat="station in stations">{{station}}</option>
+                </select>
+            </div>
+            <div class="input computed-duration" data-ng-show="startStation && endStation">
+                <label for="endStation">přepokládaná délka</label>
+                {{computedDuration}} minut
+            </div>
+
+            <div class="input">
+                <label for="realStartTime">čas reálného odjezdu</label>
+                <input type="time" name="realStartTime" id="realStartTime" data-ng-model="realStartTime" title="HH:mm">
+                <div class="error" data-ng-show="tripForm.realStartTime.$error.time">
+                    Toto není validní čas!
+                </div>
+            </div>
+            <div class="input">
+                <label for="realEndTime">čas reálného příjezdu</label>
+                <input type="time" name="realEndTime" id="realEndTime" data-ng-model="realEndTime"  title="HH:mm">
+                <div class="error" data-ng-show="tripForm.realEndTime.$error.time">
+                    Toto není validní čas!
+                </div>
+                <div class="error" data-ng-show="realStartTime > realEndTime">
+                    Není možné přijet dříve než odjet!
+                </div>
+            </div>
+            <div class="input" data-ng-show="realEndTime && realStartTime">
+                <label for="endStation">reálná délka plavby</label>
+                {{(realEndTime - realStartTime)/(1000*60)}} minut
+            </div>
+        </form>
+        <form name="reservationForm" data-ng-submit="reserve()"
+              data-ng-show="startStation && endStation && computedDuration">
+            <div class="input">
+                <h4>Rezervace spoje {{ startStation }} - {{ endStation }}</h4>
+                <label for="reservationTime">čas spoje k rezervaci</label>
+                <select data-ng-model="reservationTime" id="reservationTime" data-ng-change="computeDuration()">
+                    <option data-ng-repeat="start in starts">{{start | date: "HH:mm"}}</option>
+                </select>
+            </div>
+            <div class="reservation">
+                <div class="input">
+                    <label for="reservationName">na jméno</label>
+                    <input type="text" name="reservationName" id="reservationName" data-ng-model="reservationName"
+                           required="required">
+                </div>
+                <div class="input">
+                    <label for="reservationCount">počet osob</label>
+                    <input type="number" name="reservationCount" id="reservationCount" data-ng-model="reservationCount"
+                           value="1" min="1" max="3">
+                </div>
+                <input type="submit" value="Zarezervovat">
+            </div>
+        </form>
+
+        <form name="deleteReservationForm" data-ng-submit="deleteReservation()">
+            <div class="reservation">
+                <div class="input">
+                    <h4>Smazání rezervace spoje</h4>
+                    <label for="deleteReservationName">na jméno</label>
+                    <input type="text" name="deleteReservationName" id="deleteReservationName"
+                           data-ng-model="deleteReservationName" required="required">
+                </div>
+                <input type="submit" value="Smazat rezervaci">
+            </div>
+        </form>
+    </div>
+
+    <h3>Naše loď</h3>
+    <img src="//upload.wikimedia.org/wikipedia/commons/c/cf/Ship-croatia.jpg"
+         alt="Our ship"
+         title="By Wolli- Volkan Kücükbudak http://cologne-host.eu/ (Own work) [CC BY 3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons">
+
+</div>
+
+<script src="./angular.js"></script>
+<script src="./ngStorage.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>
