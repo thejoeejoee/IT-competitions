@@ -1,0 +1,9 @@
+<h2>Multimedia</h2>
+
+<h3>Fotoaparát</h3>
+<p>Apple iPhone 5c je vybaven stejným 8Mpx fotoaparátem s&nbsp;možností nahrávání FullHD videa jako loňský iPhone 5. Přítomná zůstala i&nbsp;přední kamera s&nbsp;rozlišením 1,9 Mpx na videohovoryFaceTime či Skype. Ve výbavě mu nechybí LED blesk a&nbsp;autofokus. Fotoaparát má BSI senzor, objektiv s&nbsp;paticí čoček krytých safírovým sklíčkem a&nbsp;světelnost f/2,4.</p>
+<p>Prostředí fotoaparátu iSight bylo kompletně renovováno a&nbsp;obohaceno o&nbsp;další funkce. Důležité je také připomenout, že iPhone má plně automatický režim a&nbsp;umožňuje upravit pouze použití blesku a&nbsp;HDR režimu. Zapnout si můžete ještě vodicí mřížku, pomocí které přesně trefíte zlatý řez. Další nastavení pokročilejších funkcí fotoaparátu známá z&nbsp;jiných platforem nejsou k&nbsp;dispozici.</p>
+<p>Kvalitou fotek se iPhone 5c rovná loňskému iPhonu 5, který i&nbsp;rok po uvedení fotí ve většině případů lépe než většina konkurence. Měřit se s&nbsp;iPhonem mohou jen vybrané Lumie (1020 a&nbsp;1520 ho hravě překonají) a&nbsp;některé nejvyšší modely s&nbsp;Androidem (např. LG G2, Samsung Galaxy S4, Sony Xperia Z1). Důležité je vyzdvihnout, že na automatiku v&nbsp;iPhonech se dá plně spolehnout, což u&nbsp;některých konkurentů neplatí. Pro drtivou většinu uživatelů tak bude absence možnosti manuálního nastavení ISO, clony či vyvážení bílé barvy irelevantní. Na druhé straně, pokročilí uživatelé jsou tímto způsobem výrazně limitováni.</p>
+
+<h3>Video</h3>
+<p>Apple iPhone 5c nedisponuje funkcemi zpomaleného nahrávání videa při 120 obrázcích za sekundu, ani takzvaným burst módem, což jsou domény vyššího modelu iPhone 5s. Fotoaparát ale nově nabídne osm barevných filtrů, které známe z&nbsp;Instagramu. Aplikovat se dají před focením, nebo i&nbsp;dodatečně. Novinkou je na sociálních sítích velmi populární čtvercový formát s&nbsp;poměrem stran 1 : 1.</p>
