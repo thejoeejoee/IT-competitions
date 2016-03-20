@@ -1,0 +1,35 @@
+li {
+	list-style: none;
+	margin-bottom: 3px;
+}
+
+input[type=text],
+button {
+	height: 18px;
+	line-height: 18px;
+}
+input[type=text] {
+	width: 200px;
+	border: 1px solid black;
+	height: 20px;
+}
+button {
+	width: 80px;
+	background-color: black;
+	color: white;
+	border: 0;
+	height: 24px;
+}
+input:hover,
+input:focus {
+	background-color: lightGreen;
+	border-color: green;
+}
+button:hover,
+button:focus {
+	background-color: green;
+}
+button:first-child,
+button + button {
+	margin-left: 5px;
+}
