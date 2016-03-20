@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title n:snippet="title">{ifset title}{include title|striptags} | {/ifset}Dny v týdnu</title>
+        
+        <link rel="stylesheet" href="{$basePath}/css/style.css">
+        <script src="{$basePath}/js/jquery-1.11.2.min.js"></script>
+        <script src="{$basePath}/js/netteForms.min.js"></script>
+        <script src="{$basePath}/js/nette.ajax.js"></script>
+        <script src="{$basePath}/js/history.ajax.js"></script>
+        <script src="{$basePath}/js/main.js"></script>
+    </head>
+
+    <body>
+        <h1>Dny v týdnu</h1>
+        {block content}
+        
+        {/block}
+        <footer>možná teoretická patička</footer>
+    </body>
+</html>

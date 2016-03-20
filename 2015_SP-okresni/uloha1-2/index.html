@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8">
+	<title>Znamení</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Horoskopy</h1>
+	<div id="header-date"></div>
+	<div class="block">
+		<div class="top">
+			<img src="http://www.horoskopy.cz/img/big_beran.jpg" alt="znamení" class="sign" data-sign="beran" data-date="21. 3. až 20. 4.">
+			<img src="http://www.horoskopy.cz/img/big_lev.jpg" alt="znamení" class="sign" data-sign="lev" data-date="23. 7. až 22. 8.">
+			<img src="http://www.horoskopy.cz/img/big_strelec.jpg" alt="znamení" class="sign" data-sign="střelec" data-date="23. 11. až 21. 12. ">
+		</div>
+		<div class="middle">
+			<div class="left">
+				<img src="http://www.horoskopy.cz/img/big_ryby.jpg" alt="znamení" class="sign" data-sign="ryby" data-date="21. 2. až 20. 3. ">
+				<img src="http://www.horoskopy.cz/img/big_stir.jpg" alt="znamení" class="sign" data-sign="štír" data-date="24. 10. až 22. 11. ">
+				<img src="http://www.horoskopy.cz/img/big_rak.jpg" alt="znamení" class="sign" data-sign="rak" data-date="22. 6. až 22. 7. ">
+			</div>
+			<div class="center">
+				<table>
+					<tr>
+						<td><span class="prev"></span> <h2></h2> <span class="next"></span></td>
+					</tr>
+					<tr>
+						<td><p></p></td>
+					</tr>
+					<tr>
+						<td><b><span class="date"></span></b></td>
+					</tr>
+				</table>
+			</div>
+			<div class="right">
+				<img src="http://www.horoskopy.cz/img/big_byk.jpg" alt="znamení" class="sign" data-sign="býk" data-date="21. 4. až 21. 5. ">
+				<img src="http://www.horoskopy.cz/img/big_panna.jpg" alt="znamení" class="sign" data-sign="panna" data-date="23. 8. až 22. 9. ">
+				<img src="http://www.horoskopy.cz/img/big_kozoroh.jpg" alt="znamení" class="sign" data-sign="kozoroh" data-date="22. 12. až 20. 1.">
+			</div>
+		</div>
+		<div class="bottom">
+			<img src="http://www.horoskopy.cz/img/big_vodnar.jpg" alt="znamení" class="sign" data-sign="vodnář" data-date="21. 1. až 20. 2.">
+			<img src="http://www.horoskopy.cz/img/big_vahy.jpg" alt="znamení" class="sign" data-sign="váhy" data-date="23. 9. až 23. 10.">
+			<img src="http://www.horoskopy.cz/img/big_blizenci.jpg" alt="znamení" class="sign" data-sign="blíženci" data-date="22. 5. až 21. 6.">
+		</div>
+	</div>
+	<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script>
+	jQuery(function($) {
+		var data = {
+			"beran": "Stále se nemůžete nasytit vašeho milovaného. Už zase vyhlížíte společné chvíle a nejraději byste s ním byli stále. Člověk ale bohužel nemůže být živ z lásky, musí také pracovat. Vybičujete se k rekordnímu tempu, abyste alespoň skončili co nejdříve.",
+			"lev": "Využijte přízně hvězd pro realizaci náročných profesních plánů. V pracovní oblasti nyní budete schopní prosadit jakékoliv nápady. Každá idealistická myšlenka najde podporu u vašich spolupracovníků a klacky pod nohy by vám neměli házet ani nadřízení.",
+			"střelec": "V oblasti práce se nyní můžete významně posunout. Vypadá to, že se vám naskytne několik finančně zajímavých nabídek naráz. Budete si velice lámat hlavu, která z nich má pro vás největší perspektivu. Rozhodování ale nakonec nemusí být tak složité.",
+			"býk": "V oblasti lásky budete potřebovat ohleduplného partnera. Cítíte se trochu rozechvělí a nejistí, navenek se ale snažíte chovat s nadhledem a nedávat to moc najevo. Vnímavý protějšek to ovšem na vás stejně pozná a poskytne vám svou láskyplnou podporu. ",
+			"panna": " Rodina vám bude předhazovat, že jsou vaše činy ryze sobecké. Jenom vy budete vědět, že je tomu právě naopak. Ve skutečnosti jste se dosud rozdávali a někteří příbuzní jenom brali. Teď svou praktickou či finanční výpomoc omezíte nebo úplně utnete. ",
+			"kozoroh": "Pokud jste kvůli pracovnímu vytížení propadali askezi, tím spíše vás teď zlákají rozkošnické zážitky. Případná milostná avantýra by však měla mít jednorázové trvání. Nebylo by prozíravé skočit hned do druhého extrému a řádit jako utržení ze řetězu. ",
+			"blíženci": "Chtěli byste předvést, jak moc vám na vašem protějšku záleží. Asi zvažujete koupi nějakého honosného daru, tím byste ale svého milého mohli přivést do rozpaků. Klidně darujte jen nějakou s láskou vybranou drobnost, která se mu přesně trefí do vkusu. ",
+			"rak": "Bude vám připadat, že se někteří vaši přátelé projevují povrchně. Nechápete, jak se mohou před jistými osobami stavět jako nejlepší kamarádi, a pak je v jejich nepřítomnosti jedním dechem pomlouvat. Vy si ale nepřisadíte, zdržíte se všech komentářů. ",
+			"štír": "Venuše ve znamení Berana vám ve vztahu nenahrává. U protějšku se setkáte s malou ochotou vám naslouchat. Pokud se budete vztekat, moc si nepomůžete. Raději se zamyslete, jestli vaše chování není také přehlíživé a partner vám jen nenastavuje zrcadlo. ",
+			"váhy": "Váš posílený důvtip a komunikativnost najdou uplatnění v zaměstnání i mimo pracovní hřiště. Je vhodný čas pro veřejné proslovy. Posluchače zaujmete přesně volenými slovy, inteligentními postřehy i humorem. Dokážete jim vhodně přiblížit každé téma. ",
+			"vodnář": "U srdce vás budou hřát nejen vaše pracovní úspěchy, ale i podpora lidí z vaší rodiny. Uvědomujete si, že bez ní by to zdaleka nebylo ono. Také teď vás budou vychvalovat až do nebes, což vás přivede do rozpaků, ale i velmi potěší. Budete si to užívat. ",
+			"ryby": "Většina zrozenců bude mít v lásce pěkně zamotanou hlavu. Budete nervózní z intenzity citů, které vám někdo vyjádří. Bude vás napadat, zda vám dotyčný jen nelichotí, aby snadno a rychle dosáhl svého. V tom vám asi udělá jasno jenom intuice nebo čas. "
+		};
+		var list = ["beran", "lev", "střelec", "býk", "panna", "kozoroh", "blíženci", "váhy", "vodnář", "rak", "štír", "ryby"];
+		var setSign = function (slug) {
+			$("table").fadeOut(150, function() {
+				sign = data[slug];
+				$("p").text(sign);
+				$("h2").text(slug);
+				$(".date").text($("img.sign[data-sign='" +  slug + "']").data("date"));
+				var prev = "", next = "";
+				if (list.indexOf(slug) == 0) {
+					prev = "ryby";
+					next = "lev";
+				} else if (list.indexOf(slug) == list.length -1) {
+					prev = "štír";
+					next = "beran";
+				} else {
+					prev = list[list.indexOf(slug) - 1];
+					next = list[list.indexOf(slug) + 1];
+				};
+				$(".next").text(next);
+				$(".prev").text(prev);
+				$(this).fadeIn(150);
+			});
+		};
+		$("img.sign").hover(function() {
+			setSign($(this).data('sign'));
+		}, function() {
+			
+		});
+		var date = new Date();
+		$("#header-date").text(date.getDate() + ". " + (date.getMonth() + 1) + ". " + date.getFullYear());
+	});
+	</script>
+</body>
+</html>

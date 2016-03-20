@@ -1,0 +1,8 @@
+{block content}
+<ul>
+    <li class="day" n:foreach="$days as $slug => $day">
+        <h2>{$day[0]}</h2>
+        <p>{$day[1]|truncate:37,""}</p>
+        <a n:href="Day:default $slug">{$day[0]}</a>
+    </li>
+</ul>

@@ -1,0 +1,25 @@
+parameters:
+    users: users.neon
+
+php:
+	date.timezone: Europe/Prague
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+session:
+	expiration: 14 days
+
+services:
+	- App\Model\UserManager(%users%)
+	- App\Model\SubjectManager
+	- App\Forms\SignFormFactory
+	- App\RouterFactory
+	router: @App\RouterFactory::createRouter
+
+extensions:
+    ajaxHistory: VojtechDobes\NetteAjax\HistoryExtension
