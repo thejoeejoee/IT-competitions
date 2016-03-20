@@ -1,0 +1,10 @@
+body {
+  font-family: "Arial", "Helvetica", sans-serif; }
+
+table {
+  width: 100%;
+  background-color: lightblue; }
+  table tr:hover {
+    background-color: lightcoral; }
+
+/*# sourceMappingURL=style.css.map */

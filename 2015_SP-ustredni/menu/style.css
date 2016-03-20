@@ -1,0 +1,58 @@
+@import url(reset.css);
+body {
+  font-family: "Arial", "Helvetica", sans-serif; }
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: lightgrey; }
+  #menu > li {
+    padding: 6px;
+    display: inline-block !important; }
+    #menu > li:hover {
+      background-color: lightblue; }
+    #menu > li:hover > ul {
+      display: inline-block; }
+  #menu ul {
+    display: none;
+    position: absolute;
+    background-color: #ececec;
+    border: 1px solid gray;
+    top: 100%;
+    left: 0; }
+    #menu ul li:hover {
+      background-color: lightblue;
+      position: relative; }
+    #menu ul > li:hover > ul {
+      display: inline-block;
+      background-color: #ececec;
+      position: absolute;
+      left: 100%;
+      top: 0; }
+  #menu li {
+    position: relative; }
+    #menu li .sep {
+      height: 1px;
+      background-color: darkgray;
+      margin: 1px 0 0; }
+    #menu li .has-sub::after {
+      content: " >";
+      position: absolute;
+      right: 0;
+      font-weight: bold; }
+  #menu a {
+    text-decoration: none;
+    color: black; }
+
+#content {
+  padding-top: 30px; }
+  #content p {
+    padding: 5px 10px; }
+
+@media print {
+  #menu {
+    display: none; } }
+
+/*# sourceMappingURL=style.css.map */

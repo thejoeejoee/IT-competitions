@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <title>Tabulky</title>
+    <script src="jquery.js"></script>
+    <script src="tables.js"></script>
+</head>
+<body>
+<script>
+    window.onload = function () {
+        tables.setTitle("Nadpis");
+        tables.setColumnCount(3);
+        tables.setHeaderTitles(['month', 'min temp', 'max temp']);
+        tables.addRow("leden", "-2.4", "4.7");
+        tables.addRow("únor", "-1.4", "3.5");
+        tables.addRow("březen", "3.4", "8.0");
+        tables.addRow("duben", "8.4", "14.0");
+        tables.addRow("květen", "8.4", "14.0");
+        tables.addRow("prasinec", "5.4", "14.0");
+        tables.addRow("duben", "7.4", "4.0");
+        tables.addRow("_ první", "8.4", "14.0");
+        tables.addRow("jiný měsíc", "3.4", "6.0");
+        tables.addRow("měsíc", "10.4", "14.0");
+        tables.addRowFromString("květen;9.9;15.2");
+        tempsSummer = [
+            ['červen', '12.4', '19.0'],
+            ['červenec', '17.4', '25.2']
+        ];
+        tables.addRowsJson(tempsSummer);
+        tables.createTable("here");
+    };
+
+</script>
+
+<div id="here"></div>
+</body>
+</html>

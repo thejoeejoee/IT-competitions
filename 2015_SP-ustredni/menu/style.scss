@@ -1,0 +1,72 @@
+@import "reset.css";
+
+body {
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: lightgrey;
+  > li {
+    padding: 6px;
+    display: inline-block !important;
+    &:hover {
+      background-color: lightblue;
+    }
+    &:hover > ul {
+      display: inline-block;
+    }
+  }
+  ul {
+    display: none;
+    position: absolute;
+    background-color: lighten(lightgrey, 10%);
+    border: 1px solid gray;
+    top: 100%;
+    left: 0;
+    li:hover {
+      background-color: lightblue;
+      position: relative;
+    }
+    > li:hover > ul {
+      display: inline-block;
+      background-color: lighten(lightgrey, 10%);
+      position: absolute;
+      left: 100%;
+      top: 0;
+    }
+  }
+  li {
+    position: relative;
+    .sep {
+      height: 1px;
+      background-color: darkgray;
+      margin: 1px 0 0;
+    }
+    .has-sub::after {
+      content: " >";
+      position: absolute;
+      right: 0;
+      font-weight: bold;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+#content {
+  padding-top: 30px;
+  p {
+    padding: 5px 10px;
+  }
+}
+
+@media print {
+  #menu {
+    display: none;
+  }
+}
