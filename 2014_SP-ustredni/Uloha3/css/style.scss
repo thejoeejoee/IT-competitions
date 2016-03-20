@@ -1,0 +1,33 @@
+@import "reset.css";
+
+body {
+	position: absolute;
+}
+.cifernik {
+	width: 600px;
+	height: 600px;
+	border: 2px solid black;
+	border-radius: 600px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	img {
+		position: absolute;
+		height: 300px;
+		margin-left: 300px;
+		$h: 300px;
+		&#mala {
+			transform-origin: 50% (330/371)*$h;
+		}
+		&#velka {
+			transform-origin: 50% (397/442)*$h;
+		}
+		&#vterinova {
+			transform-origin: 50% (414/440)*$h;
+		}
+	}
+}
+div {
+	font-size: 2rem;
+	position: absolute;
+}

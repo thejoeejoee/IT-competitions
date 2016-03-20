@@ -1,0 +1,34 @@
+@import "reset.css";
+
+.square {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	border-radius: 100px;
+	background-color: blue;
+
+}
+
+.chart {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 60%;
+	z-index: -1;
+	background-color: gray;
+	font-size: 2rem;
+	.mark {
+		position: relative;
+		width: 10%;
+		height: 100%;
+		margin: 0 4%;
+		display: inline-block;
+		.item {
+			width: 100%;
+			height: 20px;
+			background-color: red;
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+@import "reset.css";
+body {
+  position: absolute; }
+
+.cifernik {
+  width: 600px;
+  height: 600px;
+  border: 2px solid black;
+  border-radius: 600px;
+  position: absolute;
+  top: 20px;
+  left: 20px; }
+  .cifernik img {
+    position: absolute;
+    height: 300px;
+    margin-left: 300px; }
+    .cifernik img#mala {
+      transform-origin: 50% 266.84636px; }
+    .cifernik img#velka {
+      transform-origin: 50% 269.45701px; }
+    .cifernik img#vterinova {
+      transform-origin: 50% 282.27273px; }
+
+div {
+  font-size: 2rem;
+  position: absolute; }
