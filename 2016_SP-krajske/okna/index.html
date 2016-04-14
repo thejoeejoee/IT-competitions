@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Windows 98</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tabs">
+    <div class="tab active" data-id="1">Plocha 1</div>
+    <div class="tab" data-id="2">Plocha 2</div>
+    <div class="tab" data-id="3">Plocha 3</div>
+    <div class="tab add">+</div>
+</div>
+<div class="desktops">
+    <div class="desktop active" data-id="1">
+        <div class="window" style="left: 100px; top: 200px;">
+            <div class="header">
+                <span class="title">Okno 1</span>
+                <a class="btn close">❌</a>
+                <a class="btn maximize-toggle">◻</a>
+            </div>
+            <div class="body">
+                <p><strong>Program provedl neplatnou operaci a bude ukončen.</strong></p>
+                <p>Pokud jste na něčem pracovali, informace mohly být ztraceny.</p>
+                <p><strong>Ohlaste tento problém společnosti.</strong>
+                </p>
+                <p>Byla vytvořena zpráva o chybách, kterou nám můžete zaslat a pomoci tak při zdokonalení aplikace. Tato
+                    sestava bude zpracována jako důvěrná a anonymní.</p>
+            </div>
+            <div class="footer">
+                <a class="btn" href="mailto:soutez@example.com">Odeslat zprávu o chybách</a>
+                <a class="btn close">Neodesílat</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="desktop" data-id="2"></div>
+    <div class="desktop" data-id="3"></div>
+</div>
+
+
+<script src="jquery.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

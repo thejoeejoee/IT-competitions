@@ -1,0 +1,66 @@
+body {
+  overflow-y: scroll;
+}
+.card {
+  font-family: sans-serif;
+  height: 320px;
+  width: 200px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid black;
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  &[data-type=♥], &[data-type=♦] {
+    color: darkred;
+    border-color: darkred;
+  }
+  &:before {
+    padding: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+    content: attr(data-type) attr(data-value);
+  }
+  &:after {
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 1.5rem;
+    content: attr(data-type) attr(data-value);
+    transform: rotate(180deg);
+  }
+  .type {
+    display: block;
+    text-align: center;
+    &:after {
+      content: attr(data-type);
+      display: inline-block;
+      font-size: 10rem;
+      position: relative;
+      top: calc(160px - 6rem);
+    }
+  }
+  transition: ease 2s;
+  &:hover {
+    transform: scale(1.5, 1.5);
+    transition: ease 2s;
+    z-index: 100;
+  }
+}
+
+.control {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  button, input {
+
+    font-size: 2rem;
+  }
+  input {
+    width: 70px;
+  }
+  z-index: 10000;
+}
